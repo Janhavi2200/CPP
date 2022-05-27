@@ -1,0 +1,54 @@
+#include <iostream.h>
+#include <conio.h>
+
+class add
+{
+  public:
+  int a,b,sum;
+  void display();
+};
+void add::display()
+{
+  cout<<"enter value of a and b:"<<endl;
+  cin>>a>>b;
+
+    sum=a+b;
+    cout<<"addition of two numbers is:"<<sum<<endl;
+}
+class dif:public add
+{
+  public:
+  int x,y,sub;
+  void display_sub();
+};
+void dif::display_sub()
+{
+  cout<<"enter value of x and y:"<<endl;
+  cin>>x>>y;
+
+    sub=x-y;
+    cout<<"substraction of two numbers is:"<<sub<<endl;
+}
+class mul:public dif
+{
+  public:
+  int p,q,multi;
+  void display_mul();
+};
+void mul::display_mul()
+{
+  cout<<"enter value of p and q:"<<endl;
+  cin>>p>>q;
+
+    multi=p*q;
+    cout<<"multiplication of two numbers is:"<<multi<<endl;
+}
+void main()
+{
+  clrscr();
+  mul o1;
+  o1.display();
+  o1.display_sub();
+  o1.display_mul();
+  getch();
+}
